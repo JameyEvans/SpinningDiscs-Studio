@@ -1,13 +1,20 @@
-﻿using System;
-
+using System;
 namespace SpinningDiscs
 {
-    public class DVD
+    public class DVD : BaseDisc,IOpticalDisc
     {
-        // TODO: Implement your custom interface.
+        public DVD (string name, int maxCapacity, string disktype, int someUsedCapacity) : base(name, maxCapacity, disktype, someUsedCapacity)
+        {
+        }
 
-        // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-        //  need to be declared separately.
+        public void ReadData()
+        {
+            Console.WriteLine("Would you like to watch a movie from this dvd?");
+        }
+
+        public void SpinDisc()
+        {
+            Console.WriteLine("A dvd spins at a rate of 200 - 500 rpm.");
+        }
     }
 }
-
